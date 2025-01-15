@@ -1,2 +1,2 @@
-# fpc-themes
+# website-themes
 Website themes boilerplate
