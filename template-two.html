@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Website Themes Boilerplate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .text-warning {
+            color: #FF7F55 !important;
+        }
+
+        /* .bg-warning {
+      background-color: #FF7F55 !important;
+    } */
+
+        .bg-warning {
+            background-color: #FF7F55 !important;
+        }
+
+        .text-secondary {
+            color: #004B75 !important;
+        }
+
+        .bg-secondary {
+            background-color: #004B75 !important;
+        }
+
+        .text-dark {
+            color: #000000 !important;
+        }
+
+        .bg-dark {
+            background-color: #000000 !important;
+        }
+
+        .text-light {
+            color: #00649F !important;
+        }
+
+        .bg-light {
+            background-color: #00649F !important;
+        }
+
+        @font-face {
+            font-family: aptosDisplay;
+            src: url(res/fonts/aptos-display/Aptos-Display.ttf);
+        }
+
+        @font-face {
+            font-family: aptosDisplayBold;
+            src: url(res/fonts/aptos-display/Aptos-Display-Bold.ttf);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: aptosDisplayBold;
+        }
+
+        p,
+        p small {
+            font-family: aptosDisplay;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="color">
+        <div class="container-fluid mb-5">
+            <div class="row">
+                <div class="col px-0">
+                    <div class="card bg-warning border-0 rounded-0">
+                        <div class="card-body">
+                            <p class="text-center my-4">#FF7F55</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col px-0">
+                    <div class="card border-0 rounded-0">
+                        <div class="card-body">
+                            <p class="text-secondary text-center my-4">#FFFFFF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col px-0">
+                    <div class="card bg-dark border-0 rounded-0">
+                        <div class="card-body">
+                            <p class="text-white text-center my-4">#000000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col px-0">
+                    <div class="card bg-light border-0 rounded-0">
+                        <div class="card-body">
+                            <p class="text-white text-center my-4">#DFE0DF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col px-0">
+                    <div class="card bg-secondary border-0 rounded-0">
+                        <div class="card-body">
+                            <p class="text-white text-center my-4">#004B75</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <p class="fw-bold display-1 my-5 py-4">
+                        <span class="text-warning">Color </span>
+                        <br>
+                        <span class="text-secondary">Scheme</span>
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card my-5">
+                        <img src="res/Screenshot3.png" class="img-fluid rounded" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card my-5">
+                        <img src="res/Screenshot4.png" class="img-fluid rounded" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card bg-dark text-warning border-0 my-5">
+                        <div class="card-body px-5">
+                            <p class="lead fw-bold fs-2 mb-0">Headings</p>
+                        </div>
+                    </div>
+                    <div class="card text-secondary px-5">
+                        <div class="card-body">
+                            <h1 class="my-4">This is H1 tag Heading text content.</h1>
+                            <h2 class="my-4">This is H2 tag Heading text content.</h2>
+                            <h3 class="my-4">This is H3 tag Heading text content.</h3>
+                            <h4 class="my-4">This is H4 tag Heading text content.</h4>
+                            <h5 class="my-4">This is H5 tag Heading text content.</h5>
+                            <h6 class="my-4">This is H6 tag Heading text content.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pargraph">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card bg-warning border-0 my-5">
+                        <div class="card-body px-5">
+                            <p class="lead text-dark fw-bold fs-2 mb-0">Pargraphs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-8">
+                    <div class="card text-secondary border-0 my-3">
+                        <div class="card-body">
+                            <p class="lead my-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                                sagittis iaculis arcu, quis elementum arcu porta vel. Vivamus vitae laoreet mauris.
+                                Morbi facilisis placerat odio ut vestibulum. Maecenas venenatis erat in sapien vulputate
+                                ultrices. Vestibulum sed augue lacus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 my-3">
+                        <div class="card-body">
+                            <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis
+                                iaculis arcu, quis elementum arcu porta vel. Vivamus vitae laoreet mauris. Morbi
+                                facilisis placerat odio ut vestibulum. Maecenas venenatis erat in sapien vulputate
+                                ultrices. Vestibulum sed augue lacus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-12">
+                    <div class="card bg-secondary text-light border-0 my-3">
+                        <div class="card-body">
+                            <p class="my-5 mx-auto w-75">
+                                <small class="text-white ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus sagittis iaculis arcu, quis elementum arcu porta vel. Vivamus vitae
+                                    laoreet mauris. Morbi facilisis placerat odio ut vestibulum. Maecenas venenatis erat
+                                    in sapien vulputate ultrices. Vestibulum sed augue lacus.</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="icon" class="pb-4 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card bg-warning border-0 my-5">
+                        <div class="card-body px-5">
+                            <p class="lead text-dark fw-bold fs-2 mb-0">Icons</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-dark pt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-white text-center display-2 mb-0">
+                                    <i class="bi bi-house-up-fill"></i>
+                                </p>
+                                <p class="text-center text-white"><small>Home</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-white text-center display-2 mb-0">
+                                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                                </p>
+                                <p class="text-center text-white"><small>Dashboard</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-white text-center display-2 mb-0">
+                                    <i class="bi bi-person-badge-fill"></i>
+                                </p>
+                                <p class="text-center text-white"><small>Agents</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-white text-center display-2 mb-0">
+                                    <i class="bi bi-folder-fill"></i>
+                                </p>
+                                <p class="text-center text-white"><small>Projects</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-white text-center display-2 mb-0">
+                                    <i class="bi bi-info-circle-fill"></i>
+                                </p>
+                                <p class="text-center text-white"><small>Metadata</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-white text-center display-2 mb-0">
+                                    <i class="bi bi-stack"></i>
+                                </p>
+                                <p class="text-center text-white"><small>Projects</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-light pt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-white text-center display-2 mb-0">
+                                    <i class="bi bi-house-up-fill"></i>
+                                </p>
+                                <p class="text-center text-white"><small>Home</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-white text-center display-2 mb-0">
+                                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                                </p>
+                                <p class="text-center text-white"><small>Dashboard</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-white text-center display-2 mb-0">
+                                    <i class="bi bi-person-badge-fill"></i>
+                                </p>
+                                <p class="text-center text-white"><small>Agents</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-white text-center display-2 mb-0">
+                                    <i class="bi bi-folder-fill"></i>
+                                </p>
+                                <p class="text-center text-white"><small>Projects</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-white text-center display-2 mb-0">
+                                    <i class="bi bi-info-circle-fill"></i>
+                                </p>
+                                <p class="text-center text-white"><small>Metadata</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-white text-center display-2 mb-0">
+                                    <i class="bi bi-stack"></i>
+                                </p>
+                                <p class="text-center text-white"><small>Projects</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-warning pt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-dark text-center display-2 mb-0">
+                                    <i class="bi bi-house-up-fill"></i>
+                                </p>
+                                <p class="text-center text-dark"><small>Home</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-dark text-center display-2 mb-0">
+                                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                                </p>
+                                <p class="text-center text-dark"><small>Dashboard</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-dark text-center display-2 mb-0">
+                                    <i class="bi bi-person-badge-fill"></i>
+                                </p>
+                                <p class="text-center text-dark"><small>Agents</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-dark text-center display-2 mb-0">
+                                    <i class="bi bi-folder-fill"></i>
+                                </p>
+                                <p class="text-center text-dark"><small>Projects</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-dark text-center display-2 mb-0">
+                                    <i class="bi bi-info-circle-fill"></i>
+                                </p>
+                                <p class="text-center text-dark"><small>Metadata</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <p class="text-dark text-center display-2 mb-0">
+                                    <i class="bi bi-stack"></i>
+                                </p>
+                                <p class="text-center text-dark"><small>Projects</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-secondary fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav justify-content-center h3 my-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#color">
+                                <i class="bi bi-palette-fill"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#heading">
+                                <i class="bi bi-card-heading"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#pargraph">
+                                <i class="bi bi-text-paragraph"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#icon">
+                                <i class="bi bi-brilliance"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
