@@ -1,0 +1,83 @@
+:root {
+    /* Custom Color Scheme */
+    --bs-white: #ffffffff;
+    --bs-uranian-blue: #a8d0e6ff;
+    --bs-timberwolf: #d3d3d3ff;
+    --bs-black: #000000ff;
+    --bs-lapis-lazuli: #375a7fff;
+    --bs-gold-metallic: #d4af37ff;
+  
+    /* CSS HSL */
+    --bs-white-hsl: hsla(0, 0%, 100%, 1);
+    --bs-uranian-blue-hsl: hsla(201, 55%, 78%, 1);
+    --bs-timberwolf-hsl: hsla(0, 0%, 83%, 1);
+    --bs-black-hsl: hsla(0, 0%, 0%, 1);
+    --bs-lapis-lazuli-hsl: hsla(211, 40%, 36%, 1);
+    --bs-gold-metallic-hsl: hsla(46, 65%, 52%, 1);
+  
+    /* CSS RGB */
+    --bs-white-rgb: rgba(255, 255, 255, 1);
+    --bs-uranian-blue-rgb: rgba(168, 208, 230, 1);
+    --bs-timberwolf-rgb: rgba(211, 211, 211, 1);
+    --bs-black-rgb: rgba(0, 0, 0, 1);
+    --bs-lapis-lazuli-rgb: rgba(55, 90, 127, 1);
+    --bs-gold-metallic-rgb: rgba(212, 175, 55, 1);
+  
+    /* Gradients */
+    --bs-gradient-top: linear-gradient(0deg, #ffffffff, #a8d0e6ff, #d3d3d3ff, #000000ff, #375a7fff, #d4af37ff);
+    --bs-gradient-right: linear-gradient(90deg, #ffffffff, #a8d0e6ff, #d3d3d3ff, #000000ff, #375a7fff, #d4af37ff);
+    --bs-gradient-bottom: linear-gradient(180deg, #ffffffff, #a8d0e6ff, #d3d3d3ff, #000000ff, #375a7fff, #d4af37ff);
+    --bs-gradient-left: linear-gradient(270deg, #ffffffff, #a8d0e6ff, #d3d3d3ff, #000000ff, #375a7fff, #d4af37ff);
+    --bs-gradient-top-right: linear-gradient(45deg, #ffffffff, #a8d0e6ff, #d3d3d3ff, #000000ff, #375a7fff, #d4af37ff);
+    --bs-gradient-bottom-right: linear-gradient(135deg, #ffffffff, #a8d0e6ff, #d3d3d3ff, #000000ff, #375a7fff, #d4af37ff);
+    --bs-gradient-top-left: linear-gradient(225deg, #ffffffff, #a8d0e6ff, #d3d3d3ff, #000000ff, #375a7fff, #d4af37ff);
+    --bs-gradient-bottom-left: linear-gradient(315deg, #ffffffff, #a8d0e6ff, #d3d3d3ff, #000000ff, #375a7fff, #d4af37ff);
+    --bs-gradient-radial: radial-gradient(#ffffffff, #a8d0e6ff, #d3d3d3ff, #000000ff, #375a7fff, #d4af37ff);
+  }
+  
+  /* Customize Bootstrap Components */
+  body {
+    background-color: var(--bs-white);
+    color: var(--bs-black);
+  }
+  
+  .navbar {
+    background-color: var(--bs-lapis-lazuli);
+  }
+  
+  .navbar a {
+    color: var(--bs-gold-metallic);
+  }
+  
+  .btn-primary {
+    background-color: var(--bs-lapis-lazuli);
+    border-color: var(--bs-lapis-lazuli);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--bs-uranian-blue);
+    border-color: var(--bs-uranian-blue);
+  }
+  
+  .card {
+    border-color: var(--bs-timberwolf);
+  }
+  
+  .card-header {
+    background-color: var(--bs-uranian-blue);
+    color: var(--bs-black);
+  }
+  
+  .card-footer {
+    background-color: var(--bs-timberwolf);
+    color: var(--bs-black);
+  }
+  
+  .alert-primary {
+    background-color: var(--bs-uranian-blue);
+    border-color: var(--bs-uranian-blue);
+    color: var(--bs-black);
+  }
+  
+  /* Add more customizations as needed */
+  
