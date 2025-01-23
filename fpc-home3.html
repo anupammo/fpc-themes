@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Sidebar 07</title>
+    <title>FPC Dashboard 3</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -150,6 +150,185 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style3.css">
+    <style>
+        span.fa-size {
+            font-size: 3em !important;
+        }
+
+        .text-orange {
+            color: #F37425;
+        }
+
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif
+        }
+
+        /* body {
+            margin-top: 30px;
+            background-color: #eee;
+        } */
+
+        /* .container {
+            min-height: 100vh;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        } */
+
+        p {
+            margin: 0px
+        }
+
+        .card {
+            width: 280px;
+            height: 520px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background: #fff;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            user-select: none;
+            z-index: 10;
+            overflow: hidden
+        }
+
+        .card .backgroundEffect {
+            bottom: 0;
+            height: 0px;
+            width: 100%
+        }
+
+        .card:hover {
+            color: #000;
+            transform: scale(1.025);
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
+        }
+
+        .card:hover .backgroundEffect {
+            bottom: 0;
+            height: 320px;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            /* background: #1b9ce3; */
+            background: #F37425;
+            animation: popBackground 0.3s ease-in
+        }
+
+        @keyframes popBackground {
+            0% {
+                height: 20px;
+                border-top-left-radius: 50%;
+                border-top-right-radius: 50%
+            }
+
+            50% {
+                height: 80px;
+                border-top-left-radius: 75%;
+                border-top-right-radius: 75%
+            }
+
+            75% {
+                height: 160px;
+                border-top-left-radius: 85%;
+                border-top-right-radius: 85%
+            }
+
+            100% {
+                height: 320px;
+                border-top-left-radius: 100%;
+                border-top-right-radius: 100%
+            }
+        }
+
+        .card .pic {
+            position: relative
+        }
+
+        .card .pic img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover
+        }
+
+        .card .date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 70px;
+            background-color: #1b9ce3;
+            color: white;
+            position: absolute;
+            bottom: 0px;
+            transition: all ease
+        }
+
+        .card .date .day {
+            font-size: 14px;
+            font-weight: 600
+        }
+
+        .card .date .month,
+        .card .date .year {
+            font-size: 10px
+        }
+
+        .card .text-muted {
+            font-size: 12px
+        }
+
+        .card:hover .text-muted {
+            color: #fff !important
+        }
+
+        .card .content {
+            padding: 0 20px
+        }
+
+        .card .content .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 10px;
+            background-color: #1b9ce3;
+            border-radius: 25px;
+            font-size: 12px;
+            border: none
+        }
+
+        .card:hover .content .btn {
+            background: #fff;
+            color: #1b9ce3;
+            box-shadow: #0000001a 0px 3px 5px
+        }
+
+        .card .content .btn .fas {
+            font-size: 10px;
+            padding-left: 5px
+        }
+
+        .card .content .foot .admin {
+            color: #1b9ce3;
+            font-size: 12px
+        }
+
+        .card:hover .content .foot .admin {
+            color: #fff
+        }
+
+        .card .content .foot .icon {
+            font-size: 12px
+        }
+    </style>
     <meta name="robots" content="noindex, follow">
 </head>
 
@@ -157,24 +336,39 @@
 
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar" class="bg-dark active">
-            <h1><a href="index.html" class="img-fluid">
+            <h1><a href="#" class="img-fluid">
                     <img src="logo.png" alt="" width="100%">
                 </a></h1>
             <ul class="list-unstyled components mb-5">
                 <li class="active">
-                    <a href="#"><span class="fa fa-home"></span> Home</a>
+                    <a href="#">
+                        <span class="fa fa-home fa-size text-orange"></span> Home
+                        <!-- <span class="fa-text"></span> -->
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="fa fa-user"></span> About</a>
+                    <a href="#">
+                        <span class="fa fa-th fa-size text-orange"></span> Dashboard
+                        <!-- <span class="fa-text">Dashboard</span> -->
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="fa fa-sticky-note"></span> Blog</a>
+                    <a href="#">
+                        <span class="fa fa-info-circle fa-size text-orange"></span> Metadata
+                        <!-- <span class="fa-text">Metadata</span> -->
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="fa fa-cogs"></span> Services</a>
+                    <a href="#">
+                        <span class="fa fa-user fa-size text-orange"></span> Agent
+                        <!-- <span class="fa-text">Agent</span> -->
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="fa fa-paper-plane"></span> Contacts</a>
+                    <a href="#">
+                        <span class="fa fa-folder-open fa-size text-orange"></span> Projects
+                        <!-- <span class="fa-text">Projects</span> -->
+                    </a>
                 </li>
             </ul>
 
@@ -210,110 +404,192 @@
                                 <a class="nav-link" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="#">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Portfolio</a>
+                                <a class="nav-link" href="#">Metadata</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="#">Agent</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Projects</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                            class="card-img-top" alt="Property 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Property 1</h5>
-                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City A</p>
-                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $500,000</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic"> <img class=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                                    alt="">
+                                <div class="date"> <span class="day">26</span> <span class="month">June</span> <span
+                                        class="year">2019</span> </div>
+                            </div>
+                            <div class="content">
+                                <p class="h-1 mt-4">Finance And Legal Working Streams Occur Throughout</p>
+                                <p class="text-muted mt-3">Far far away, behind the word mountains, far from the
+                                    countries
+                                    Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
+                                    <div class="btn btn-primary">Read More<span class="fas fa-arrow-right"></span></div>
+                                    <div class="d-flex align-items-center justify-content-center foot">
+                                        <p class="admin">Admin</p>
+                                        <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic"> <img class=""
+                                    src="https://images.pexels.com/photos/16207839/pexels-photo-16207839/free-photo-of-silhouettes-of-buildings-and-trees-by-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt="">
+                                <div class="date"> <span class="day">26</span> <span class="month">June</span> <span
+                                        class="year">2019</span> </div>
+                            </div>
+                            <div class="content">
+                                <p class="h-1 mt-4">Finance And Legal Working Streams Occur Throughout</p>
+                                <p class="text-muted mt-3">Far far away, behind the word mountains, far from the
+                                    countries
+                                    Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
+                                    <div class="btn btn-primary">Read More<span class="fas fa-arrow-right"></span></div>
+                                    <div class="d-flex align-items-center justify-content-center foot">
+                                        <p class="admin">Admin</p>
+                                        <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="card border-0 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic"> <img class=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                                    alt="">
+                                <div class="date"> <span class="day">26</span> <span class="month">June</span> <span
+                                        class="year">2019</span> </div>
+                            </div>
+                            <div class="content">
+                                <p class="h-1 mt-4">Finance And Legal Working Streams Occur Throughout</p>
+                                <p class="text-muted mt-3">Far far away, behind the word mountains, far from the
+                                    countries
+                                    Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
+                                    <div class="btn btn-primary">Read More<span class="fas fa-arrow-right"></span></div>
+                                    <div class="d-flex align-items-center justify-content-center foot">
+                                        <p class="admin">Admin</p>
+                                        <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="https://images.pexels.com/photos/16207839/pexels-photo-16207839/free-photo-of-silhouettes-of-buildings-and-trees-by-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            class="card-img-top" alt="Property 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Property 2</h5>
-                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City B</p>
-                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $750,000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                            class="card-img-top" alt="Property 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Property 1</h5>
-                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City A</p>
-                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $500,000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="https://images.pexels.com/photos/16207839/pexels-photo-16207839/free-photo-of-silhouettes-of-buildings-and-trees-by-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            class="card-img-top" alt="Property 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Property 2</h5>
-                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City B</p>
-                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $750,000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                            class="card-img-top" alt="Property 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Property 1</h5>
-                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City A</p>
-                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $500,000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="https://images.pexels.com/photos/16207839/pexels-photo-16207839/free-photo-of-silhouettes-of-buildings-and-trees-by-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            class="card-img-top" alt="Property 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Property 2</h5>
-                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City B</p>
-                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $750,000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                            class="card-img-top" alt="Property 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Property 1</h5>
-                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City A</p>
-                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $500,000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="https://images.pexels.com/photos/16207839/pexels-photo-16207839/free-photo-of-silhouettes-of-buildings-and-trees-by-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            class="card-img-top" alt="Property 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Property 2</h5>
-                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City B</p>
-                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $750,000</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more property cards as needed -->
             </div>
+
+            <!-- <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            class="card-img-top" alt="Property 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Property 1</h5>
+                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City A</p>
+                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $500,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://images.pexels.com/photos/16207839/pexels-photo-16207839/free-photo-of-silhouettes-of-buildings-and-trees-by-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="card-img-top" alt="Property 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Property 2</h5>
+                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City B</p>
+                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $750,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            class="card-img-top" alt="Property 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Property 1</h5>
+                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City A</p>
+                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $500,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://images.pexels.com/photos/16207839/pexels-photo-16207839/free-photo-of-silhouettes-of-buildings-and-trees-by-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="card-img-top" alt="Property 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Property 2</h5>
+                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City B</p>
+                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $750,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            class="card-img-top" alt="Property 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Property 1</h5>
+                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City A</p>
+                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $500,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://images.pexels.com/photos/16207839/pexels-photo-16207839/free-photo-of-silhouettes-of-buildings-and-trees-by-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="card-img-top" alt="Property 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Property 2</h5>
+                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City B</p>
+                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $750,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            class="card-img-top" alt="Property 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Property 1</h5>
+                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City A</p>
+                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $500,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://images.pexels.com/photos/16207839/pexels-photo-16207839/free-photo-of-silhouettes-of-buildings-and-trees-by-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="card-img-top" alt="Property 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Property 2</h5>
+                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: City B</p>
+                            <p class="card-text"><i class="bi bi-currency-dollar"></i> Price: $750,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
 
