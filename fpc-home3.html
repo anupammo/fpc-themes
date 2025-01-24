@@ -149,30 +149,15 @@
     </style>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style3.css">
     <style>
-        span.fa-size {
-            font-size: 3em !important;
-        }
-
-        .text-orange {
-            color: #F37425;
-        }
-
-        .bg-orange {
-            background-color: #F37425 !important;
-        }
-
-
-
-        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-        * {
+        /* * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif
-        }
+        } */
 
         /* body {
             margin-top: 30px;
@@ -187,15 +172,15 @@
             justify-content: center
         } */
 
-        p {
+        /* p {
             margin: 0px
-        }
+        } */
 
         .card {
-            width: 280px;
-            height: 520px;
+            width: 320px;
+            /* height: 520px; */
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            background: #fff;
+            /* background: #fff; */
             transition: all 0.5s ease;
             cursor: pointer;
             user-select: none;
@@ -215,38 +200,46 @@
             box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
         }
 
+        .card:hover .content {
+            background: none;
+            transition: 0.3s;
+        }
+
+        .card:hover .content p {
+            color: #fff !important;
+        }
+
         .card:hover .backgroundEffect {
             bottom: 0;
-            height: 320px;
+            height: 118px;
             width: 100%;
             position: absolute;
-            z-index: -1;
-            /* background: #1b9ce3; */
+            z-index: 1;
             background: #F37425;
-            animation: popBackground 0.3s ease-in
+            animation: popBackground 0.3s ease-in;
         }
 
         @keyframes popBackground {
             0% {
-                height: 20px;
+                height: 12px;
                 border-top-left-radius: 50%;
                 border-top-right-radius: 50%
             }
 
             50% {
-                height: 80px;
+                height: 24px;
                 border-top-left-radius: 75%;
                 border-top-right-radius: 75%
             }
 
             75% {
-                height: 160px;
+                height: 48px;
                 border-top-left-radius: 85%;
                 border-top-right-radius: 85%
             }
 
             100% {
-                height: 320px;
+                height: 95px;
                 border-top-left-radius: 100%;
                 border-top-right-radius: 100%
             }
@@ -258,7 +251,7 @@
 
         .card .pic img {
             width: 100%;
-            height: 280px;
+            height: auto;
             object-fit: cover
         }
 
@@ -269,7 +262,7 @@
             justify-content: center;
             width: 50px;
             height: 70px;
-            background-color: #1b9ce3;
+            background-color: #F37425;
             color: white;
             position: absolute;
             bottom: 0px;
@@ -295,7 +288,15 @@
         }
 
         .card .content {
-            padding: 0 20px
+            padding: 0 20px;
+            /* addition */
+            background-color: #ffffff99;
+            margin-top: -118px;
+            z-index: 3;
+        }
+
+        img.property-card {
+            margin-bottom: 60px;
         }
 
         .card .content .btn {
@@ -303,7 +304,8 @@
             align-items: center;
             justify-content: center;
             padding: 5px 10px;
-            background-color: #1b9ce3;
+            background-color: #F37425;
+            color: #fff;
             border-radius: 25px;
             font-size: 12px;
             border: none
@@ -311,7 +313,7 @@
 
         .card:hover .content .btn {
             background: #fff;
-            color: #1b9ce3;
+            color: #F37425;
             box-shadow: #0000001a 0px 3px 5px
         }
 
@@ -321,7 +323,7 @@
         }
 
         .card .content .foot .admin {
-            color: #1b9ce3;
+            color: #F37425;
             font-size: 12px
         }
 
@@ -333,13 +335,35 @@
             font-size: 12px
         }
     </style>
+    <style>
+        span.fa-size {
+            font-size: 3em !important;
+        }
+
+        .text-orange {
+            color: #F37425;
+        }
+
+        .bg-orange {
+            background-color: #F37425 !important;
+        }
+
+        property-card {
+            position: absolute !important;
+            z-index: -2 !important;
+        }
+
+        nav#sidebar ul li a {
+            color: #000 !important;
+        }
+    </style>
     <meta name="robots" content="noindex, follow">
 </head>
 
 <body>
 
     <div class="wrapper d-flex align-items-stretch">
-        <nav id="sidebar" class="bg-dark active">
+        <nav id="sidebar" class="bg-white active">
             <h1><a href="#" class="img-fluid">
                     <img src="logo.png" alt="" width="100%">
                 </a></h1>
@@ -389,7 +413,7 @@
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" class="btn btn-primary">
@@ -422,76 +446,387 @@
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> -->
 
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-4 py-4">
                         <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
                             <div class="backgroundEffect"></div>
-                            <div class="pic"> <img class=""
-                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                                    alt="">
-                                <div class="date"> <span class="day">26</span> <span class="month">June</span> <span
-                                        class="year">2019</span> </div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
                             </div>
                             <div class="content">
-                                <p class="h-1 mt-4">Finance And Legal Working Streams Occur Throughout</p>
-                                <p class="text-muted mt-3">Far far away, behind the word mountains, far from the
-                                    countries
-                                    Vokalia and Consonantia, there live the blind texts.</p>
-                                <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
-                                    <div class="btn btn-primary">Read More<span class="fas fa-arrow-right"></span></div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Price"><i class="bi bi-coin"></i>
+                                            646,990 - 772,990</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0 mb-0" title="Developer">Greenland
+                                            <i class="bi bi-cone-striped"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Project"><i
+                                                class="bi bi-buildings-fill"></i>
+                                            Vicinity</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-center text-dark fs-6 mt-1 mb-0" title="Property Type"><i
+                                                class="bi bi-geo-alt"></i> Detached</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0" title="City">Oshawa <i
+                                                class="bi bi-geo-alt"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <div class="btn my-3">View More</div>
+                                    </div>
+                                    <div class="col px-1">
+                                        <ul class="nav justify-content-end my-2">
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-plus-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
                                     <div class="d-flex align-items-center justify-content-center foot">
                                         <p class="admin">Admin</p>
                                         <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
                                         </p>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-4 py-4">
                         <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
                             <div class="backgroundEffect"></div>
-                            <div class="pic"> <img class=""
-                                    src="https://images.pexels.com/photos/16207839/pexels-photo-16207839/free-photo-of-silhouettes-of-buildings-and-trees-by-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                    alt="">
-                                <div class="date"> <span class="day">26</span> <span class="month">June</span> <span
-                                        class="year">2019</span> </div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
                             </div>
                             <div class="content">
-                                <p class="h-1 mt-4">Finance And Legal Working Streams Occur Throughout</p>
-                                <p class="text-muted mt-3">Far far away, behind the word mountains, far from the
-                                    countries
-                                    Vokalia and Consonantia, there live the blind texts.</p>
-                                <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
-                                    <div class="btn btn-primary">Read More<span class="fas fa-arrow-right"></span></div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Price"><i class="bi bi-coin"></i>
+                                            646,990 - 772,990</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0 mb-0" title="Developer">Greenland
+                                            <i class="bi bi-cone-striped"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Project"><i
+                                                class="bi bi-buildings-fill"></i>
+                                            Vicinity</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-center text-dark fs-6 mt-1 mb-0" title="Property Type"><i
+                                                class="bi bi-geo-alt"></i> Detached</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0" title="City">Oshawa <i
+                                                class="bi bi-geo-alt"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <div class="btn my-3">View More</div>
+                                    </div>
+                                    <div class="col px-1">
+                                        <ul class="nav justify-content-end my-2">
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-plus-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
                                     <div class="d-flex align-items-center justify-content-center foot">
                                         <p class="admin">Admin</p>
                                         <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
                                         </p>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="card border-0 mb-lg-0 mb-4">
+                    <div class="col-12 col-lg-4 py-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
                             <div class="backgroundEffect"></div>
-                            <div class="pic"> <img class=""
-                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                                    alt="">
-                                <div class="date"> <span class="day">26</span> <span class="month">June</span> <span
-                                        class="year">2019</span> </div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
                             </div>
                             <div class="content">
-                                <p class="h-1 mt-4">Finance And Legal Working Streams Occur Throughout</p>
-                                <p class="text-muted mt-3">Far far away, behind the word mountains, far from the
-                                    countries
-                                    Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Price"><i class="bi bi-coin"></i>
+                                            646,990 - 772,990</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0 mb-0" title="Developer">Greenland
+                                            <i class="bi bi-cone-striped"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Project"><i
+                                                class="bi bi-buildings-fill"></i>
+                                            Vicinity</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-center text-dark fs-6 mt-1 mb-0" title="Property Type"><i
+                                                class="bi bi-geo-alt"></i> Detached</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0" title="City">Oshawa <i
+                                                class="bi bi-geo-alt"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <div class="btn my-3">View More</div>
+                                    </div>
+                                    <div class="col px-1">
+                                        <ul class="nav justify-content-end my-2">
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-plus-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
+                                    <div class="d-flex align-items-center justify-content-center foot">
+                                        <p class="admin">Admin</p>
+                                        <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
+                                        </p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 py-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Price"><i class="bi bi-coin"></i>
+                                            646,990 - 772,990</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0 mb-0" title="Developer">Greenland
+                                            <i class="bi bi-cone-striped"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Project"><i
+                                                class="bi bi-buildings-fill"></i>
+                                            Vicinity</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-center text-dark fs-6 mt-1 mb-0" title="Property Type"><i
+                                                class="bi bi-geo-alt"></i> Detached</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0" title="City">Oshawa <i
+                                                class="bi bi-geo-alt"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <div class="btn my-3">View More</div>
+                                    </div>
+                                    <div class="col px-1">
+                                        <ul class="nav justify-content-end my-2">
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-plus-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
+                                    <div class="d-flex align-items-center justify-content-center foot">
+                                        <p class="admin">Admin</p>
+                                        <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
+                                        </p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 py-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Price"><i class="bi bi-coin"></i>
+                                            646,990 - 772,990</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0 mb-0" title="Developer">Greenland
+                                            <i class="bi bi-cone-striped"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Project"><i
+                                                class="bi bi-buildings-fill"></i>
+                                            Vicinity</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-center text-dark fs-6 mt-1 mb-0" title="Property Type"><i
+                                                class="bi bi-geo-alt"></i> Detached</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0" title="City">Oshawa <i
+                                                class="bi bi-geo-alt"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <div class="btn my-3">View More</div>
+                                    </div>
+                                    <div class="col px-1">
+                                        <ul class="nav justify-content-end my-2">
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-plus-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 py-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Price"><i class="bi bi-coin"></i>
+                                            646,990 - 772,990</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0 mb-0" title="Developer">Greenland
+                                            <i class="bi bi-cone-striped"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Project"><i
+                                                class="bi bi-buildings-fill"></i>
+                                            Vicinity</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-center text-dark fs-6 mt-1 mb-0" title="Property Type"><i
+                                                class="bi bi-geo-alt"></i> Detached</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0" title="City">Oshawa <i
+                                                class="bi bi-geo-alt"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <div class="btn my-3">View More</div>
+                                    </div>
+                                    <div class="col px-1">
+                                        <ul class="nav justify-content-end my-2">
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-plus-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="col-12 col-lg-4 py-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/16207839/pexels-photo-16207839/free-photo-of-silhouettes-of-buildings-and-trees-by-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            </div>
+                            <div class="content">
+                                <h2 class="h6 mt-3">646,990 - 772,990</h2>
                                 <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
-                                    <div class="btn btn-primary">Read More<span class="fas fa-arrow-right"></span></div>
+                                    <div class="btn btn-primary">View More<span class="fas fa-arrow-right"></span></div>
                                     <div class="d-flex align-items-center justify-content-center foot">
                                         <p class="admin">Admin</p>
                                         <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
@@ -500,7 +835,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
