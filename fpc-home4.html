@@ -1,0 +1,1245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>FPC Dashboard 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style id="" media="all">
+        /* latin-ext */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLDz8Z1JlFc-K.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLDD4Z1JlFc-K.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLDD4Z1xlFQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLBT5Z1JlFc-K.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(/fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLBT5Z1xlFQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style4.css">
+    <style>
+        /* * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif
+        } */
+
+        /* body {
+            margin-top: 30px;
+            background-color: #eee;
+        } */
+
+        /* .container {
+            min-height: 100vh;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        } */
+
+        /* p {
+            margin: 0px
+        } */
+
+        .card {
+            width: 300px;
+            /* height: 520px; */
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            /* background: #fff; */
+            transition: all 0.5s ease;
+            cursor: pointer;
+            user-select: none;
+            z-index: 10;
+            overflow: hidden
+        }
+
+        .card .backgroundEffect {
+            bottom: 0;
+            height: 0px;
+            width: 100%
+        }
+
+        .card:hover {
+            color: #000;
+            transform: scale(1.025);
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
+        }
+
+        .card:hover .content {
+            background: none;
+            transition: 0.3s;
+        }
+
+        .card:hover .content p,
+        .card:hover .content ul li a i {
+            color: #fff !important;
+        }
+
+        .card:hover .backgroundEffect {
+            bottom: 0;
+            height: 118px;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            background: #F37425;
+            animation: popBackground 0.3s ease-in;
+        }
+
+        @keyframes popBackground {
+            0% {
+                height: 12px;
+                border-top-left-radius: 50%;
+                border-top-right-radius: 50%
+            }
+
+            50% {
+                height: 24px;
+                border-top-left-radius: 75%;
+                border-top-right-radius: 75%
+            }
+
+            75% {
+                height: 48px;
+                border-top-left-radius: 85%;
+                border-top-right-radius: 85%
+            }
+
+            100% {
+                height: 95px;
+                border-top-left-radius: 100%;
+                border-top-right-radius: 100%
+            }
+        }
+
+        .card .pic {
+            position: relative
+        }
+
+        .card .pic img {
+            width: 100%;
+            height: auto;
+            object-fit: cover
+        }
+
+        .card .date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 70px;
+            background-color: #F37425;
+            color: white;
+            position: absolute;
+            bottom: 0px;
+            transition: all ease
+        }
+
+        .card .date .day {
+            font-size: 14px;
+            font-weight: 600
+        }
+
+        .card .date .month,
+        .card .date .year {
+            font-size: 10px
+        }
+
+        .card .text-muted {
+            font-size: 12px
+        }
+
+        .card:hover .text-muted {
+            color: #fff !important
+        }
+
+        .wrapper div#content {
+            background-color: #fff9;
+        }
+
+        .card .content {
+            padding: 0 20px;
+            /* addition */
+            background-color: #ffffff99;
+            margin-top: -118px;
+            z-index: 3;
+        }
+
+        img.property-card {
+            margin-bottom: 60px;
+        }
+
+        .card .content .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 10px;
+            background-color: #F37425;
+            color: #fff;
+            border-radius: 25px;
+            font-size: 12px;
+            border: none
+        }
+
+        .card:hover .content .btn {
+            background: #fff;
+            color: #F37425;
+            box-shadow: #0000001a 0px 3px 5px
+        }
+
+        .card .content .btn .fas {
+            font-size: 10px;
+            padding-left: 5px
+        }
+
+        .card .content .foot .admin {
+            color: #F37425;
+            font-size: 12px
+        }
+
+        .card:hover .content .foot .admin {
+            color: #fff
+        }
+
+        .card .content .foot .icon {
+            font-size: 12px
+        }
+    </style>
+    <style>
+        span.fa-size {
+            font-size: 3em !important;
+        }
+
+        .text-orange {
+            color: #F37425;
+        }
+
+        .bg-orange {
+            background-color: #F37425 !important;
+        }
+
+        property-card {
+            position: absolute !important;
+            z-index: -2 !important;
+        }
+
+        nav#sidebar ul li a {
+            color: #F37425;
+        }
+
+        nav ul li a span.fa {
+            transition: 0.3s ease-in-out;
+        }
+
+        nav ul li:hover a span.fa {
+            text-shadow: 4px 4px 4px #000000;
+            color: #fff;
+        }
+
+        nav ul li:hover a {
+            text-shadow: 2px 4px 4px #000000;
+            color: #fff !important;
+        }
+
+        nav ul li {
+            transition: 0.3s ease-in-out;
+            border-radius: 5px;
+            margin: 4px;
+        }
+
+        nav ul li:hover {
+            background-color: #F37425;
+            border-radius: 5%;
+        }
+
+        #sidebar.active {
+            min-width: 96px;
+        }
+    </style>
+    <style>
+        /* .context {
+            width: 100%;
+            position: absolute;
+            top: 50vh;
+        } */
+
+
+        /* .area {
+            background: #4e54c8;
+            background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+            width: 100%;
+            height: 100vh;
+        } */
+
+        .circles {
+            position: absolute;
+            top: 0;
+            left: 10%;
+            width: 90%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: rgba(48, 173, 16, 0.411);
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+
+        }
+
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+            background: rgba(16, 102, 173, 0.411);
+        }
+
+
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+            background: rgba(173, 16, 152, 0.411);
+        }
+
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+            background: rgba(66, 173, 16, 0.411);
+        }
+
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+            background: rgba(97, 16, 173, 0.596);
+        }
+
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+            background: rgba(47, 173, 16, 0.671);
+        }
+
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+            background: rgba(173, 16, 94, 0.623);
+        }
+
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+            background: rgba(173, 16, 94, 0.623);
+        }
+
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+            background: rgba(47, 173, 16, 0.815);
+        }
+
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+            background: rgba(173, 16, 55, 0.774);
+        }
+
+        .circles li:nth-child(10) {
+            left: 85%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
+
+        @keyframes animate {
+
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
+
+        }
+    </style>
+    <style>
+        /* body {
+            margin: 0;
+            height: 100vh;
+            background: #2D92DF;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+        } */
+
+        canvas {
+            position: absolute;
+            bottom: 0;
+            /* z-index: -1; */
+            /* display: block; */
+            width: 100%;
+            height: 100%;
+        }
+
+        .login-container {
+            position: fixed;
+            width: 90%;
+            max-width: 400px;
+            padding: 2rem;
+            padding-bottom: 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(12px);
+            z-index: 1;
+            animation: formZoomIn 1.5s ease-out forwards;
+            margin-top: 20vh;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 10%;
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+            animation: logoSlideIn 1.5s ease-out forwards;
+        }
+
+        .logo {
+            width: 10rem;
+            height: 10em;
+        }
+
+        .icon-container {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 1.2rem;
+            margin: 1.2rem 0;
+            border: 2px solid #FF7F50;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #FF5722;
+            background-color: rgba(255, 255, 255, 0.8);
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 127, 80, 0.6);
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 1.2rem;
+            margin-top: 1.5rem;
+            border: none;
+            background-color: #FF7F50;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #FF5722;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        input[type="submit"]:active {
+            background-color: #FF7043;
+            transform: translateY(2px);
+        }
+
+        @keyframes formZoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8) translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes logoSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes borderAnimation {
+            0% {
+                border-color: rgba(255, 140, 0, 0.8);
+            }
+
+            50% {
+                border-color: rgba(255, 165, 0, 0.8);
+            }
+
+            100% {
+                border-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        canvas {
+            z-index: -1;
+        }
+    </style>
+    <meta name="robots" content="noindex, follow">
+</head>
+
+<body>
+    <canvas id="sunburstCanvas" width="1242" height="225"></canvas>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" class="bg-white active">
+            <h1 class="mb-5"><a href="#" class="img-fluid">
+                    <img src="logo.png" alt="" width="100%">
+                </a></h1>
+            <ul class="list-unstyled components my-4">
+                <li class="">
+                    <div class="backgroundEffect"></div>
+                    <a href="#">
+                        <span class="fa fa-home fa-size text-orange"></span> Home
+                        <!-- <span class="fa-text"></span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-th fa-size text-orange"></span> Dashboard
+                        <!-- <span class="fa-text">Dashboard</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-info-circle fa-size text-orange"></span> Metadata
+                        <!-- <span class="fa-text">Metadata</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-user fa-size text-orange"></span> Agent
+                        <!-- <span class="fa-text">Agent</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-folder-open fa-size text-orange"></span> Projects
+                        <!-- <span class="fa-text">Projects</span> -->
+                    </a>
+                </li>
+            </ul>
+
+            <!-- <div class="footer">
+                <p>
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is
+                    made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                        target="_blank">Colorlib.com</a>
+                </p>
+            </div> -->
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+
+            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Metadata</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Agent</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Projects</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> -->
+
+            <div class="container">
+                <!-- <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample"
+                                        role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Link with href
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseExample">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Project Name</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect1">Area</label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect1">City</label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect1">Property Type</label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-12 col-lg-4 py-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Price"><i class="bi bi-coin"></i>
+                                            646,990 - 772,990</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0 mb-0" title="Developer">
+                                            Greenland
+                                            <i class="bi bi-cone-striped"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Project"><i
+                                                class="bi bi-buildings-fill"></i>
+                                            Vicinity</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-center text-dark fs-6 mt-1 mb-0" title="Property Type"><i
+                                                class="bi bi-geo-alt"></i> Detached</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0" title="City">Oshawa <i
+                                                class="bi bi-geo-alt"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <div class="btn my-3">View More</div>
+                                    </div>
+                                    <div class="col px-1">
+                                        <ul class="nav justify-content-end my-2">
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-plus-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
+                                    <div class="d-flex align-items-center justify-content-center foot">
+                                        <p class="admin">Admin</p>
+                                        <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
+                                        </p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 py-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Price"><i class="bi bi-coin"></i>
+                                            646,990 - 772,990</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0 mb-0" title="Developer">
+                                            Greenland
+                                            <i class="bi bi-cone-striped"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Project"><i
+                                                class="bi bi-buildings-fill"></i>
+                                            Vicinity</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-center text-dark fs-6 mt-1 mb-0" title="Property Type"><i
+                                                class="bi bi-geo-alt"></i> Detached</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0" title="City">Oshawa <i
+                                                class="bi bi-geo-alt"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <div class="btn my-3">View More</div>
+                                    </div>
+                                    <div class="col px-1">
+                                        <ul class="nav justify-content-end my-2">
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-plus-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
+                                    <div class="d-flex align-items-center justify-content-center foot">
+                                        <p class="admin">Admin</p>
+                                        <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
+                                        </p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 py-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Price"><i class="bi bi-coin"></i>
+                                            646,990 - 772,990</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0 mb-0" title="Developer">
+                                            Greenland
+                                            <i class="bi bi-cone-striped"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Project"><i
+                                                class="bi bi-buildings-fill"></i>
+                                            Vicinity</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-center text-dark fs-6 mt-1 mb-0" title="Property Type"><i
+                                                class="bi bi-geo-alt"></i> Detached</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0" title="City">Oshawa <i
+                                                class="bi bi-geo-alt"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <div class="btn my-3">View More</div>
+                                    </div>
+                                    <div class="col px-1">
+                                        <ul class="nav justify-content-end my-2">
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-plus-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
+                                    <div class="d-flex align-items-center justify-content-center foot">
+                                        <p class="admin">Admin</p>
+                                        <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
+                                        </p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 py-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Price"><i class="bi bi-coin"></i>
+                                            646,990 - 772,990</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0 mb-0" title="Developer">
+                                            Greenland
+                                            <i class="bi bi-cone-striped"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Project"><i
+                                                class="bi bi-buildings-fill"></i>
+                                            Vicinity</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-center text-dark fs-6 mt-1 mb-0" title="Property Type"><i
+                                                class="bi bi-geo-alt"></i> Detached</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0" title="City">Oshawa <i
+                                                class="bi bi-geo-alt"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <div class="btn my-3">View More</div>
+                                    </div>
+                                    <div class="col px-1">
+                                        <ul class="nav justify-content-end my-2">
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-plus-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
+                                    <div class="d-flex align-items-center justify-content-center foot">
+                                        <p class="admin">Admin</p>
+                                        <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
+                                        </p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 py-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Price"><i class="bi bi-coin"></i>
+                                            646,990 - 772,990</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0 mb-0" title="Developer">
+                                            Greenland
+                                            <i class="bi bi-cone-striped"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Project"><i
+                                                class="bi bi-buildings-fill"></i>
+                                            Vicinity</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-center text-dark fs-6 mt-1 mb-0" title="Property Type"><i
+                                                class="bi bi-geo-alt"></i> Detached</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0" title="City">Oshawa <i
+                                                class="bi bi-geo-alt"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <div class="btn my-3">View More</div>
+                                    </div>
+                                    <div class="col px-1">
+                                        <ul class="nav justify-content-end my-2">
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-plus-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 py-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/7031412/pexels-photo-7031412.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Price"><i class="bi bi-coin"></i>
+                                            646,990 - 772,990</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0 mb-0" title="Developer">
+                                            Greenland
+                                            <i class="bi bi-cone-striped"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <p class="text-dark fs-6 mt-1 mb-0" title="Project"><i
+                                                class="bi bi-buildings-fill"></i>
+                                            Vicinity</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-center text-dark fs-6 mt-1 mb-0" title="Property Type"><i
+                                                class="bi bi-geo-alt"></i> Detached</p>
+                                    </div>
+                                    <div class="col px-1">
+                                        <p class="text-dark text-right fs-6 mt-1 mb-0" title="City">Oshawa <i
+                                                class="bi bi-geo-alt"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <div class="btn my-3">View More</div>
+                                    </div>
+                                    <div class="col px-1">
+                                        <ul class="nav justify-content-end my-2">
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-plus-lg"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="text-dark nav-link" href="#">
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-12 col-lg-4 py-4">
+                        <div class="card border-0 me-lg-4 mb-lg-0 mb-4">
+                            <div class="backgroundEffect"></div>
+                            <div class="pic">
+                                <img class="property-card" alt=""
+                                    src="https://images.pexels.com/photos/16207839/pexels-photo-16207839/free-photo-of-silhouettes-of-buildings-and-trees-by-the-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            </div>
+                            <div class="content">
+                                <h2 class="h6 mt-3">646,990 - 772,990</h2>
+                                <div class="d-flex align-items-center justify-content-between mt-3 pb-3">
+                                    <div class="btn btn-primary">View More<span class="fas fa-arrow-right"></span></div>
+                                    <div class="d-flex align-items-center justify-content-center foot">
+                                        <p class="admin">Admin</p>
+                                        <p class="ps-3 icon text-muted"><span class="fas fa-comment-alt pe-1"></span>3
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script> -->
+    <script src="https://colorlib.com/etc/bootstrap-sidebar/sidebar-01/js/jquery.min.js"></script>
+    <script src="https://colorlib.com/etc/bootstrap-sidebar/sidebar-01/js/popper.js"></script>
+    <script src="https://colorlib.com/etc/bootstrap-sidebar/sidebar-01/js/bootstrap.min.js"></script>
+    <script src="https://colorlib.com/etc/bootstrap-sidebar/sidebar-01/js/main.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+        integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+        data-cf-beacon='{"rayId":"9066b6d06d1580b2","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.1.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
+        crossorigin="anonymous"></script> -->
+</body>
+
+</html>
