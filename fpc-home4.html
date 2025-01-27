@@ -10,6 +10,9 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home_work" /> -->
     <link rel="stylesheet" href="css/style4.css">
     <style>
         .property-card {
@@ -544,6 +547,44 @@
             -webkit-backdrop-filter: blur(5px);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
+
+        .form-select option::selection {
+            background-color: #F37425 !important;
+        }
+
+        .form-range::-ms-track {
+            background: #F37425;
+            border-color: transparent;
+            color: transparent;
+        }
+
+        /* Custom style for the range input thumb */
+        .form-range::-webkit-slider-thumb {
+            background: #F37425;
+            border: 2px solid #F37425;
+        }
+
+        .form-range::-moz-range-thumb {
+            background: #F37425;
+            border: 2px solid #F37425;
+        }
+
+        .form-range::-ms-thumb {
+            background: #F37425;
+            border: 2px solid #F37425;
+        }
+
+        i.material-icons {
+            font-size: 60px;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+        }
     </style>
 </head>
 
@@ -558,8 +599,13 @@
                 <li class="">
                     <div class="backgroundEffect"></div>
                     <a href="#">
+                        <!-- <img src="icons/home.png" alt="" width="42">
+                        <small class="d-block">Home</small> -->
+                        <!-- <span class="material-symbols-outlined">
+                            gite
+                        </span> -->
+                        <!-- <i class="material-icons custom-icon">Cottage</i> Home -->
                         <span class="fa fa-home fa-size text-orange"></span> Home
-                        <!-- <span class="fa-text"></span> -->
                     </a>
                 </li>
                 <li>
@@ -645,7 +691,7 @@
                                     <button class="accordion-button bg-transparent py-2" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                                         aria-controls="collapseOne">
-                                        <i class="bi bi-funnel-fill"></i><span class="ps-2">Filter</span>
+                                        <i class="bi bi-funnel-fill text-orange"></i><span class="ps-2">Filter</span>
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
@@ -689,7 +735,7 @@
                                                     value="0" id="minRange">
                                                 <p class="mb-0">
                                                     <span>$0</span>
-                                                    <span class="text-center">Budget (Min)</span>
+                                                    <!-- <span class="text-center">Budget (Min)</span> -->
                                                     <span class="float-end">$5.6</span>
                                                 </p>
                                             </div>
@@ -718,7 +764,8 @@
                                     <button class="accordion-button bg-transparent py-2 collapsed" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                                         aria-controls="collapseTwo">
-                                        <i class="bi bi-search"></i> <span class="ps-2">Advance Search</span>
+                                        <i class="bi bi-search text-orange"></i> <span class="ps-2">Advance
+                                            Search</span>
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse"
