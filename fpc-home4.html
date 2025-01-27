@@ -369,10 +369,10 @@
 
         input[type="text"]:focus,
         input[type="password"]:focus {
-            border-color: #FF5722;
+            border-color: #F37425;
             background-color: rgba(255, 255, 255, 0.8);
             outline: none;
-            box-shadow: 0 0 10px rgba(255, 127, 80, 0.6);
+            box-shadow: 0 0 10px rgba(243, 116, 37, 0.6);
         }
 
         input[type="submit"] {
@@ -391,7 +391,7 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #FF5722;
+            background-color: #F37425;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
             transform: translateY(-2px);
         }
@@ -399,6 +399,13 @@
         input[type="submit"]:active {
             background-color: #FF7043;
             transform: translateY(2px);
+        }
+
+        select:focus.form-select {
+            border-color: #F37425;
+            background-color: rgba(255, 255, 255, 0.8);
+            outline: none;
+            box-shadow: 0 0 10px rgba(243, 116, 37, 0.6);
         }
 
         @keyframes formZoomIn {
@@ -651,15 +658,27 @@
                                             </div>
                                             <div class="col">
                                                 <label class="mb-0">Area</label>
-                                                <input type="text" class="form-control my-1">
+                                                <select class="form-select shadow-none my-1">
+                                                    <option>Search Area</option>
+                                                    <option value="1">East</option>
+                                                    <option value="2">North</option>
+                                                    <option value="3">North East</option>
+                                                </select>
                                             </div>
                                             <div class="col">
                                                 <label class="mb-0">City</label>
-                                                <input type="text" class="form-control my-1">
+                                                <select class="form-select shadow-none my-1">
+                                                    <option>Search City</option>
+                                                    <option value="1">Select All</option>
+                                                </select>
                                             </div>
                                             <div class="col">
                                                 <label class="mb-0">Property Type</label>
-                                                <input type="text" class="form-control my-1">
+                                                <select class="form-select shadow-none my-1">
+                                                    <option value="1">Bunglow</option>
+                                                    <option value="2">Detached</option>
+                                                    <option value="3">Townhouse</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="row mt-2">
@@ -683,7 +702,12 @@
                                             </div>
                                             <div class="col">
                                                 <button type="button"
-                                                    class="btn bg-orange text-white rounded-pill float-end px-5 my-4">Search</button>
+                                                    class="btn bg-orange text-white rounded-pill w-100 px-5 my-4">Search</button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button"
+                                                    class="btn bg-dark text-white rounded-pill w-100 float-end px-5 my-4">Clear
+                                                    Filter</button>
                                             </div>
                                         </div>
                                     </div>
@@ -712,7 +736,10 @@
                                                 </div>
                                                 <div class="col">
                                                     <label class="mb-0">Basement Type</label>
-                                                    <input type="text" class="form-control my-1">
+                                                    <select class="form-select shadow-none my-1">
+                                                        <option value="1">Finished</option>
+                                                        <option value="2">Unfinished</option>
+                                                    </select>
                                                 </div>
                                                 <div class="col">
                                                     <label class="mb-0">Developer</label>
@@ -748,14 +775,20 @@
                                                 </div>
                                                 <div class="col">
                                                     <label class="mb-0">Status</label>
-                                                    <input type="text" class="form-control my-1">
+                                                    <select class="form-select shadow-none my-1">
+                                                        <option value="1">Active</option>
+                                                        <option value="2">Sold</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
                                                     <button type="button"
-                                                        class="btn bg-orange text-white rounded-pill float-end px-5 my-4">Search</button>
+                                                        class="btn bg-orange text-white rounded-pill w-100 px-5 my-4">Search</button>
                                                 </div>
+                                                <div class="col"></div>
+                                                <div class="col"></div>
+                                                <div class="col"></div>
                                             </div>
                                         </form>
                                     </div>
